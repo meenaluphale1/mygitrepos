@@ -1,3 +1,8 @@
+FROM alpine/git
+WORKDIR /mygitrepos
+RUN git clone https://github.com/meenaluphale1/mygitrepos.git 
+
+
 FROM maven:3.5.4-jdk-8-alpine as maven
 
 COPY ./pom.xml ./pom.xml
