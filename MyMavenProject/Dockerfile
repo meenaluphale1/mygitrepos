@@ -1,15 +1,7 @@
-FROM java:8
-
-RUN apt-get -y install git
-
-RUN git clone https://meenaluphale1:RitwikUphale123@github.com/mygitrepos mygitfolder
-
-COPY . /mygitfolder
-WORKDIR /home/mygitfolder
-
-RUN javac helloWorld.java
-
-CMD ["java", "helloWorld"]
+FROM tomcat:8.0-alpine
+COPY MyMavenProject.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh", "run"]/MyMavenProject.war
 
 
 #FROM maven:3.5.4-jdk-8-alpine as maven
