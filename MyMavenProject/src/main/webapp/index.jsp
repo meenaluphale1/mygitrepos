@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>testing maven app - git - docker !!!!</h2>
+<h2>Jenkins Pipeline Demo !!!!</h2>
 </body>
 </html>
